@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بەڵـگەخانە</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>بەڵـگەخانە</h1>
+    </header>
+
+    <section id="content">
+        <img src="./rebwar.jpg" alt="Dzyw Malaf" class="content-image">
+        <p class="zzz">دوای بەدواداچون لەلایەن ڕۆژنامەنووسێکی نزیک لە بەرەی خۆیان بە گومانی هەبوونی چەند کارێکی پیسی پارێزگارەکەی کەرکوک، دواجار ڕاستیەکان دەرکەوتن و ئاشکرابوون.</p>
+        <p class="zz">بینەر و گوێگری بەڵگە ڤیدیۆ و تۆماری دەنگی بن لە خوارەوە:</p>
+        
+        <div class="button-group">
+            <p class="bt">بۆ بینینی ڤیدۆ پەنجە بدە لە "بەڵگەی ڤیدیۆی"</p>
+            <button class="zxz1" onclick="alert('11')">بەڵگەی ڤیدیۆی</button>
+        </div>
+
+        <div class="button-group">
+            <p class="bt">بۆ گوێگرتن لە تۆماری دەنگی پەنجە بدە لە "بەڵگەی دەنگی"</p>
+            <button class="zxz2" onclick="alert('22')">بەڵگەی دەنگی</button>
+        </div>
+    </section>
+
+    <footer>
+        <p class="sasa">&copy; 2024 Balgaxana News</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+        console.log('Post ID:', postId);
+    </script>
+</body>
+</html>

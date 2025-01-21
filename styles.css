@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'kurdttf';
+    src: url('./K24KurdishLight-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'kurdttf', sans-serif;
+    text-align: right;
+    direction: rtl;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'kurdttf';
+    color: red;
+    font-weight: bold;
+}
+
+#content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.button-group {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-group button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.button-group button:hover {
+    background: #555;
+}
+
+.zzz {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'kurdttf';
+    color: black;
+    font-weight: bold;
+}
+
+.zz {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'kurdttf';
+    color: rgb(204, 0, 0);
+    font-weight: bold;
+}
+
+.bt {
+    font-size: 16;
+    font-family: 'kurdttf';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.zxz1, .zxz2 {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'kurdttf', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.zxz1 {
+    background-color: red !important;
+}
+
+.zxz2 {
+    background-color: blue !important;
+}
+
+.zxz1:hover, .zxz2:hover {
+    opacity: 0.8;
+}
+
+.button-group {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        text-align: center;
+    }
+}
