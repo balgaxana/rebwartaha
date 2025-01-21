@@ -73,7 +73,7 @@ h1 {
 }
 
 .bt {
-    font-size: 16;
+    font-size: 16px;
     font-family: 'kurdttf';
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -89,7 +89,7 @@ footer {
 
 .zxz1, .zxz2 {
     text-align: right;
-    font-size: 20px;
+    font-size: 20px !important;
     font-family: 'kurdttf', Arial, sans-serif;
     font-weight: bold;
     color: white;
