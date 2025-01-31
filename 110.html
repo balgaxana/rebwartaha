@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera Access (Ethical Use)</title>
+    <style>
+        #cameraView { width: 640px; height: 480px; border: 2px solid black; }
+    </style>
+</head>
+<body>
+    <h2>Camera Access Demo</h2>
+    <video id="cameraView"></video>
+    <button onclick="startCamera()">Enable Camera</button>
+
+    <script>
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    document.getElementById('cameraView').srcObject = stream;
+                })
+                .catch(err => {
+                    alert("Permission denied or error: " + err.message);
+                });
+        }
+    </script>
+</body>
+</html>
