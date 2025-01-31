@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Tracking (Ethical Use)</title>
+    <style>
+        #locationResult { padding: 20px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>Location Tracking Demo</h2>
+    <button onclick="getLocation()">Share Location</button>
+    <div id="locationResult"></div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    position => {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        document.getElementById('locationResult').innerHTML = 
+                            `Latitude: ${lat}<br>Longitude: ${lon}`;
+                    },
+                    error => {
+                        alert("Permission denied or error: " + error.message);
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+    </script>
+</body>
+</html>
