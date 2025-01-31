@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera Access Demo</title>
+    <style>
+        #cameraView { width: 640px; height: 480px; border: 2px solid #ccc; }
+        button { padding: 10px; background: #007bff; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Camera Access (Ethical Use Only)</h2>
+    <video id="cameraView"></video>
+    <button onclick="startCamera()">Enable Camera</button>
+
+    <script>
+        async function startCamera() {
+            try {
+                // Check if HTTPS (critical for camera access)
+                if (window.location.protocol !== 'https:' && !window.location.hostname.includes('localhost')) {
+                    alert("Camera requires HTTPS in production!");
+                    return;
+                }
+
+                // Request camera access
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const videoElement = document.getElementById('cameraView');
+                videoElement.srcObject = stream;
+                videoElement.play();
+            } catch (error) {
+                console.error("Error:", error);
+                alert(`Error: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>
